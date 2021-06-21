@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './RoombaApp.css';
 
-function App() {
+function RoombaApp() {
+  let boardRow = new Array(10).fill('')
+  let board = Array(10).fill(boardRow)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Grid">
+      {board.map((row, index) => {
+        return (
+          <div className="Column">
+            {row.map((cell) => {
+              return <li className="Cell">{cell}</li>
+            })}
+          </div>
+        )
+      })}
     </div>
   );
 }
 
-export default App;
+export default RoombaApp;
