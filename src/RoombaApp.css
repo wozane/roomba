@@ -18,3 +18,19 @@
   text-align: center;
   font-size: 2em;
 }
+
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.hideCleaner {
+  display: none;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.rotate270 {
+  transform: rotate(270deg);
+}
